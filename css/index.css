@@ -1,0 +1,67 @@
+p{
+	font-size: 12px
+}
+li{
+	font-weight: 700;
+	font-size:12px;
+	margin-left: 100px
+}
+p.superlist{
+	color: #999
+}
+#superid{
+	font-weight: 700
+}
+/*伪类选择器*/
+a:link{
+	color: #FF46B8
+}
+a:visited{
+	color: #FF0000
+}
+a:hover{
+	color: #00FF00
+}
+a:active{
+	color: #0000FF
+}
+.box{
+	width: 800px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+.floattest1{
+	width: 200px;
+	height: 200px;
+	background-color: #F00;
+	float: right;
+}
+.floattest2{
+	width: 200px;
+	height: 200px;
+	background-color: #0f0;
+}
+.floattest3{
+	width: 200px;
+	height: 200px;
+	background-color: #00f;
+}
+.more{
+	width: 100px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #333;
+	margin: 100px auto;
+	text-align: center;
+	line-height: 40px;
+	box-shadow: 0 4px 20px -5px #333;
+	overflow: hidden;
+}
+
+.more a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	width: 100px;
+	height: 40px;
+}
