@@ -2,75 +2,133 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<base target="_blank">
-	<title>Lloyd's site</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<base target="_self">
+	<title>Lloyyd</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<h1>This is Lloyd.<br>
-	A designer.</h1>
-	<a href="https://www.google.com">谷歌</a>
-	<a href="secondary_page.html">关于我</a>
-	<a href="#">我的作品集</a>
-	<h2>Index</h2>
-		<a href="#gif_laugh" target="_self">photo</a>
-	<div>
-		<p>	
-			<strong>今天</strong>  <br> 
-			<em>豆芽</em>在冰箱里  <br>
-			<del>由于寂寞</del>  <br>
-			<ins>自顾自无氧呼吸起来</ins> <br>
-		</p>
-		<p>	
-			发酵了  <br>
-			炒完了才发现 <br> 
-			好邪魅的味道 <br>
-		</p>	
-		<p>
-			Rua  <br>
-			倒了  <br>
-			可惜了跟他一起下锅的韭菜  <br>
-			借着半碗青菜  <br>
-			和两个鸡蛋搞定了晚饭  <br>
-			寂寞
-		</p>
-		<div>
-		<p class="superlist">	
-			<strong>今天</strong>  <br> 
-			<em>豆芽</em>在冰箱里  <br>
-			<del>由于寂寞</del>  <br>
-			<ins>自顾自无氧呼吸起来</ins> <br>
-		</p>
-		<p id="superid">	
-			发酵了  <br>
-			炒完了才发现 <br> 
-			好邪魅的味道 <br>
-		</p>	
-		<p>
-			Rua  <br>
-			倒了  <br>
-			可惜了跟他一起下锅的韭菜  <br>
-			借着半碗青菜  <br>
-			和两个鸡蛋搞定了晚饭  <br>
-			寂寞
-		</p>
+	<div id="container">
+		<div class="container--full-screen section--homepage-1">
+			<header>
+				<a class="brand" href="homepage.html">
+					<div class="logo"></div>
+				</a>
+				<div class="nav--header">
+					<ul>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">About Me</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="container--add-padding">
+				<h1>JUST DO IT</h1>
+			</div>
+		</div>
+		<div class="container--full-screen section--homepage-2">
+			<div class="container--add-padding container--hp-2-1">
+				<h2>My Portfolio</h2>
+				<div class="gallery--portfolio">
+					<div class="listitem--portfolio"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container--full-screen section--case">
+			<div class="bg--case" id="bg--coinview"></div>
+			<div class="container--add-padding container--case">
+				<div class="title--case">Coinview Case Study</div>
+				<div class="desc--case">
+					In the late half of 2017, our team tried some small side projects, one of those is the Coinview App.<br>Coinview is focusing on providing cryptocurrency market information.<br>We built an MVP to test the market requirement.<br>And it did make sense and proved that the market was growing big enough to start a career.
+				</div>
+			</div>
+		</div>
+		<div class="container--full-screen section--case">
+			<div class="bg--case" id="bg--pasotan"></div>
+			<div class="container--add-padding container--case">
+				<div class="title--case">Pasotan Case Study</div>
+				<div class="desc--case">
+					Pasotan.com is a side project of our team that started in January 2019.<br>It was aiming to introduce pc monitor information, which was just a member's hobby at first.<br>I participated in the project when we decided to turn this potential site into a real product.
+				</div>
+			</div>
+		</div>
+		<div class="container--full-screen section--contact">
+			<div class="container--add-padding container--contact">
+				<h2>Contact With Me</h2>
+				<div class="text--contact email"><a href="mailto:lloyyd.weng@gmail.com" target="_blank">Mail: lloyyd.weng@gmail.com</a></div>
+				<div class="text--contact linkedin"><a href="https://www.linkedin.com/in/designer-lloyd" target="_blank">Linkedin: www.linkedin.com/in/designer-lloyd</a></div>
+			</div>
+		</div>	
 	</div>
-	<ul class="superlist">
-		<li>苹果</li>
-		<li>香蕉</li>
-		<li>橘子</li>
-	</ul>
-	<span>哈哈哈</span>
-	<!-- 注释 -->
-	<hr width="500px" align="left">
-	<img src="pic/7A2C991F227A13F7C5E5253CE12DA5A4.gif" alt="笑" title="笑死我了" id="gif_laugh" width="100" border="2">
 	
-	<div class="box">
-		<div class="floattest1"></div>
-		<div class="floattest2"></div>
-		<div class="floattest3"></div>
-	</div>
-	<div class="more"><a href="#">查看更多</a></div>
-	<hr>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+	    var curIndex = 0;
+	    var container = $("#container");
+	    var sumCount = $(".container--full-screen").length;
+	    var $window = $(window);
+	    var duration = 1000;
+	    //时间控制
+	    var aniTime = 0;
+
+	    var scrollFunc = function (e) {
+	        //如果动画还没执行完，则return
+	        if(new Date().getTime() < aniTime + duration){
+	            return;
+	        }
+	        e = e || window.event;
+	        var t = 0;
+	        if (Math.abs(e.deltaY) < 20) {
+	        	return;
+	        }
+	        if (e.deltaY) {//IE/Opera/Chrome
+	            t = - e.deltaY;
+	            if (t > 0 && curIndex > 0) {
+	                //上滚动
+	                movePrev();
+	            } else if (t < 0 && curIndex < sumCount - 1) {
+	                //下滚动
+	                moveNext();
+	            }
+	        } else if (e.detail) {//Firefox
+	            t = - e.detail;
+	            if (t < 0 && curIndex > 0) {
+	                //上滚动
+	                movePrev();
+	            } else if (t > 0 && curIndex < sumCount - 1) {
+	                //下滚动
+	                moveNext();
+	            }
+	        }
+	    };
+
+	    function moveNext(){
+	        //获取动画开始时的时间
+	        aniTime = new Date().getTime();
+	        container.css("transform", "translate3D(0, -" + (++curIndex) * $window.height() + "px, 0)");
+	    }
+
+	    function movePrev(){
+	        //获取动画开始时的时间
+	        aniTime = new Date().getTime();
+	        container.css("transform", "translate3D(0, -" + (--curIndex) * $window.height() + "px, 0)");
+	    }
+
+	    function init(){
+	        /*注册事件*/
+	        if (document.addEventListener) {
+	            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+	        }//W3C
+	        window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+
+	        container.css({
+	            "transition": "all 1s",
+	            "-moz-transition": "all 1s",
+	            "-webkit-transition": "all 1s"
+	        });
+	    }
+
+	    init();
+	</script>
 </body>
 </html>

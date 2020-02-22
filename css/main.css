@@ -1,0 +1,215 @@
+/*clear all the default sytle*/
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+ul li{
+	list-style: none;
+}
+
+body{
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html{
+	font-family: Futura PT,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
+	font-size: 16px;
+	color: #444;
+	overflow: hidden;
+}
+
+a{
+	color: #444;
+	text-decoration: none;
+}
+
+::selection{
+	background-color: #ffb7b7;
+	color: #EEEEEE;
+}
+
+/*set header style*/
+header{
+	height: 60px;
+	width: 100%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+
+/*set logo style*/
+.brand{
+	height: 100%;
+	flex: 0 0 100px;
+}
+
+.logo{
+	margin-left: 40px;
+	height: 100%;
+	background: url(../pic/logo.png) no-repeat;
+	background-size: contain;
+}
+
+/*set nav style*/
+.nav--header{
+	height: 100%;
+	flex: auto;
+}
+
+.nav--header ul{
+	margin-right: 40px;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav--header li{
+	padding: 20px;
+}
+
+.nav--header li a{
+	font-weight: normal;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+
+/*set section default style*/
+#container, .container--full-screen{
+	height: 100vh;	
+}
+
+.section--homepage-1{
+	background-color: #EEEEEE;
+}
+
+.section--homepage-2{
+	background-color: #FFFFFF;
+}
+
+.section--homepage-3{
+	background-color: #EEEEEE;
+}
+
+/*set section-1 style*/
+.container--add-padding{
+	width: 100%;
+	padding-left: calc(50% - 550px);
+	padding-right: calc(50% - 550px);
+}
+
+h1{
+	font-size: 8em;
+	padding-top: calc(50vh - 120px);
+}
+
+/*set section-2 style*/
+h2{
+	font-size: 3em;
+	font-weight: normal;
+	padding-top: 20vh;
+	text-align: center;
+}
+
+.container--hp-2-1{
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+}
+
+/*set portfolio gallery style*/
+.gallery--portfolio{
+	margin-top: 60px;
+	height: 50vh;
+	display: flex;
+	justify-content: space-around;
+}
+
+/*.listitem--portfolio{
+	height: 50vh;
+	width: 600px;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+	box-shadow:
+	  0 1.1px 2.8px rgba(0, 0, 0, 0.02),
+	  0 2.7px 6.7px rgba(0, 0, 0, 0.028),
+	  0 5px 12.5px rgba(0, 0, 0, 0.035),
+	  0 8.9px 22.3px rgba(0, 0, 0, 0.042),
+	  0 16.7px 41.8px rgba(0, 0, 0, 0.05),
+	  0 40px 100px rgba(0, 0, 0, 0.07);
+}*/
+
+/*set case study style*/
+.section--case{
+	position: relative;
+	/*background-image: url(../pic/coinview-app-o5OGVa1hfwY.jpg);
+	background-size: cover;
+	-webkit-filter: brightness(50%);
+	filter: brightness(50%);*/
+}
+
+.bg--case{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+
+/*set coinview style*/
+#bg--coinview{
+	background-image: url(../pic/coinview-app-o5OGVa1hfwY.jpg);
+	filter: brightness(50%);
+}
+
+.container--case{
+	position: absolute;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	height: 100%;
+}
+
+.title--case{
+	flex: none;
+	text-align: center;
+	color: #ffffff;
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+.desc--case{
+	flex: none;
+	text-align: center;
+	color: #ffffff;
+	font-size: 1.5em;
+	padding-top: 20px;
+}
+
+/*set pasotan style*/
+#bg--pasotan{
+	background-image: url(../pic/pasotan-hero-img.jpg);
+	filter: brightness(50%);
+}
+
+/*set contact style*/
+.text--contact{
+	font-size: 1.25em;
+	padding: 0px 350px;
+	text-align: center;
+}
+
+.email{
+	padding-top: 20vh;
+}
+
+.linkedin{
+	padding-top: 20px;
+}
