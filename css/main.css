@@ -11,6 +11,12 @@ ul li{
 	list-style: none;
 }
 
+ol{
+	margin: 0px;
+	padding: 0px;
+	padding-inline-start: 1em;
+}
+
 body{
 	background-color: #FFFFFF;
 	margin-left: auto;
@@ -18,14 +24,13 @@ body{
 }
 
 html{
-	font-family: Futura PT,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
+	font-family: proxima-nova,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
 	font-size: 16px;
-	color: #444;
-	overflow: hidden;
+	color: #222;
 }
 
 a{
-	color: #444;
+	color: #222;
 	text-decoration: none;
 }
 
@@ -100,10 +105,10 @@ header{
 }
 
 /*set section-1 style*/
-.container--add-padding{
-	width: 100%;
-	padding-left: calc(50% - 550px);
-	padding-right: calc(50% - 550px);
+.container--add-margin{
+	width: 1100px;
+	margin-left: calc(50% - 550px);
+	margin-right: calc(50% - 550px);
 }
 
 h1{
@@ -212,4 +217,79 @@ h2{
 
 .linkedin{
 	padding-top: 20px;
+}
+
+
+
+
+/*style of case-study/pasotan.html*/
+
+.bg--case-study{
+	background-color: #EEEEEE;
+	padding: 100px 0;
+}
+
+.bg--article{
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+img.hero-image{
+	width: 100%;
+	filter: brightness(80%);
+}
+
+.body--article{
+	padding: 50px 40px;
+	width: 800px;
+}
+
+h1.article{
+	font-family: proxima-nova, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	padding-top: 20px;
+	margin-bottom: 60px;
+	font-size: 3em;
+
+}
+
+h2.article{
+	font-family: proxima-nova, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	margin-top: 80px;
+	padding-top: 0;
+	font-size: 2em;
+	text-align: left;
+}
+
+p, ol{
+	font-family: adobe-garamond-pro, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.6em;
+	line-height: 170%;
+	margin: 20px 0;
+}
+
+img.article{
+	width: 100%;
+	margin: 20px 0;
+	box-shadow:
+	  0 0.7px 2.2px rgba(0, 0, 0, 0.02),
+	  0 1.7px 5.3px rgba(0, 0, 0, 0.028),
+	  0 3.1px 10px rgba(0, 0, 0, 0.035),
+	  0 5.6px 17.9px rgba(0, 0, 0, 0.042),
+	  0 10.4px 33.4px rgba(0, 0, 0, 0.05),
+	  0 25px 80px rgba(0, 0, 0, 0.07)
+	;
+}
+
+a.article{
+	text-decoration-line: underline;
 }
