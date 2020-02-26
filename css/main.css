@@ -26,7 +26,7 @@ body{
 
 html{
 	font-family: proxima-nova,-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
-	font-size: 16px;
+	font-size: 100%;
 	color: #222;
 }
 
@@ -50,19 +50,25 @@ header{
 	display: flex;
 }
 
-
 /*set logo style*/
 .brand{
 	height: 100%;
-	flex: 0 0 100px;
+	flex: 0 0 auto;
 }
 
 .logo{
 	margin-left: 40px;
+	width: 60px;
 	height: 100%;
 	background: url(../pic/lloyyd-logo.svg) no-repeat;
 	background-size: 60%;
-	background-position: center;
+	background-position: left;
+}
+
+@media screen and (max-device-width: 1200px) {
+	.logo{
+		margin-left: 20px;
+	}
 }
 
 /*set nav style*/
@@ -72,11 +78,17 @@ header{
 }
 
 .nav--header ul{
-	margin-right: 40px;
+	margin-right: 20px;
 	height: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+}
+
+@media screen and (max-device-width: 1200px) {
+	.nav--header ul{
+		margin-right: 0;
+	}
 }
 
 .nav--header li{
@@ -129,6 +141,17 @@ h1{
 	font-size: 8em;
 }
 
+@media screen and (max-device-width: 1200px) {
+	.container--add-margin{
+		width: calc(100vw - 40px);
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	h1{
+		font-size: 5em;
+	}
+}
+
 /*set section-2 style*/
 h2{
 	font-size: 3.5em;
@@ -142,35 +165,9 @@ h2{
 	flex-flow: column nowrap;
 }
 
-/*set portfolio gallery style*/
-.gallery--portfolio{
-	margin-top: 60px;
-	height: 50vh;
-	display: flex;
-	justify-content: space-around;
-}
-
-/*.listitem--portfolio{
-	height: 50vh;
-	width: 600px;
-	border-radius: 8px;
-	background-color: #FFFFFF;
-	box-shadow:
-	  0 1.1px 2.8px rgba(0, 0, 0, 0.02),
-	  0 2.7px 6.7px rgba(0, 0, 0, 0.028),
-	  0 5px 12.5px rgba(0, 0, 0, 0.035),
-	  0 8.9px 22.3px rgba(0, 0, 0, 0.042),
-	  0 16.7px 41.8px rgba(0, 0, 0, 0.05),
-	  0 40px 100px rgba(0, 0, 0, 0.07);
-}*/
-
 /*set case study style*/
 .section--case{
 	position: relative;
-	/*background-image: url(../pic/coinview-app-o5OGVa1hfwY.jpg);
-	background-size: cover;
-	-webkit-filter: brightness(50%);
-	filter: brightness(50%);*/
 }
 
 .bg--case{
@@ -178,10 +175,12 @@ h2{
 	height: 100%;
 	width: 100%;
 	background-size: cover;
+	background-position:center;
 }
 
 div.button--group{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -203,12 +202,6 @@ a.case--study{
 a.case--study:hover{
 	background: rgba(255,255,255,1);
 	color: #222222;
-}
-
-/*set coinview style*/
-#bg--coinview{
-	background-image: url(../pic/coinview-app-o5OGVa1hfwY.jpg);
-	filter: brightness(50%);
 }
 
 .container--case{
@@ -235,16 +228,38 @@ a.case--study:hover{
 	padding-top: 20px;
 }
 
-/*set pasotan style*/
+#bg--coinview{
+	background-image: url(../pic/coinview-app-o5OGVa1hfwY.jpg);
+	filter: brightness(50%);
+}
+
 #bg--pasotan{
 	background-image: url(../pic/pasotan-hero-img.jpg);
 	filter: brightness(50%);
 }
 
+@media screen and (max-device-width: 1200px) {
+	.title--case{
+		font-size: 3em;
+		text-align: left;
+	}
+	.desc--case{
+		font-size: 1.25em;
+		text-align: left;
+	}
+	div.button--group{
+		margin-top: 30px;
+	}
+	a.case--study{
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
 /*set contact style*/
 .text--contact{
 	font-size: 1.25em;
-	padding: 0px 350px;
+/*	padding: 0px 350px;*/
 	text-align: center;
 }
 
@@ -259,7 +274,7 @@ a.case--study:hover{
 
 
 
-/*style of case study*/
+/*style of case study article*/
 
 .bg--case-study{
 	background-color: #EEEEEE;
@@ -401,4 +416,31 @@ a.article{
 iframe.youtube{
 	width: 100%;
 	height: 405px;
+}
+
+@media screen and (max-device-width: 1200px) {
+	.bg--case-study{
+		padding: 70px 0;
+	}
+	.body--article{
+		width: calc(100vw - 40px);
+		padding: 20px;
+	}
+	h1.article{
+		font-size: 2.5em;
+		padding-top: 0;
+		margin-bottom: 20px;
+	}
+
+	h2.article{
+		font-size: 2em;
+		margin-top: 60px;
+	}
+
+	p, ol{
+		font-size: 1.125em;
+	}
+	iframe.youtube{
+		height: 166px;
+	}
 }
