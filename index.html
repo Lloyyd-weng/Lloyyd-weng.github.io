@@ -72,6 +72,7 @@
 	    var duration = 1000;
 	    //时间控制
 	    var aniTime = 0;
+	    var os = navigator.platform;
 
 	    var scrollFunc = function (e) {
 	        //如果动画还没执行完，则return
@@ -80,7 +81,7 @@
 	        }
 	        e = e || window.event;
 	        var t = 0;
-	        if (Math.abs(e.deltaY) < 20) {
+	        if (Math.abs(e.deltaY) < 20 && os == "MacIntel") {
 	        	return;
 	        }
 	        if (e.deltaY) {//IE/Opera/Chrome
