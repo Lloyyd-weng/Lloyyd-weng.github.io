@@ -363,7 +363,6 @@ div.image--article--column{
 img.article--2column{
 	flex: auto;
 	max-width: 48%;
-	max-height: 550px;
 	margin: 20px 0 0 0;
 	border-radius: 4px;
 	box-shadow:
@@ -379,7 +378,6 @@ img.article--2column{
 img.article--3column{
 	flex: auto;
 	max-width: 30%;
-	max-height: 300px;
 	margin: 20px 0 0 0;
 	border-radius: 4px;
 	box-shadow:
@@ -395,7 +393,6 @@ img.article--3column{
 img.article--4column{
 	flex: auto;
 	max-width: 22%;
-	max-height: 200px;
 	margin: 20px 0 0 0;
 	border-radius: 4px;
 	box-shadow:
