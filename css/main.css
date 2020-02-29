@@ -457,6 +457,10 @@ iframe.youtube{
 		;
 	}
 
+	div.image--article--column{
+		align-items: flex-start;
+	}
+
 	img.article--2column{
 		flex: auto;
 		max-width: 48%;
