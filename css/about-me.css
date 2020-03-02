@@ -1,0 +1,45 @@
+body{
+	background-color: #EEEEEE;
+}
+
+div.container--add-margin{
+	padding-top: 15vh;
+	padding-bottom: 80px;
+	width: 720px;
+	margin-left: calc(50% - 360px);
+	margin-right: calc(50% - 360px);
+}
+
+h1{
+	font-size: 6em;
+	color: #DDDDDD;
+	margin-bottom: 40px;
+}
+
+h2{
+	font-size: 2em;
+	text-align: left;
+	margin-top: 80px;
+}
+
+a.download{
+	font-family: adobe-garamond-pro, serif;
+	font-size: 1.6em;
+	font-weight: 800;
+	margin-right: 40px;
+	text-decoration: underline;
+}
+
+@media screen and (max-device-width: 1200px) {
+	div.container--add-margin{
+		width: calc(100vw - 40px);
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	h1{
+		font-size: 4em;
+	}
+	a.download{
+		font-size: 1.125em;
+	}
+}
