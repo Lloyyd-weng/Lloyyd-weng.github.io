@@ -228,12 +228,11 @@ a.case--study:hover{
 	color: #ffffff;
 	font-size: 1.5em;
 	padding-top: 20px;
-	line-height: 1.6;
 }
 
 #bg--coinview{
 	background-image: url(../pic/coinview-app-o5OGVa1hfwY.jpg);
-	filter: brightness(40%);
+	filter: brightness(50%);
 }
 
 #bg--pasotan{
@@ -329,7 +328,7 @@ h3.article{
 	font-style: normal;
 	margin-top: 40px;
 	padding-top: 0;
-	font-size: 1.8em;
+	font-size: 1.6em;
 	text-align: left;
 }
 
@@ -337,7 +336,7 @@ p, ol{
 	font-family: adobe-garamond-pro, serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 1.4em;
+	font-size: 1.6em;
 	line-height: 170%;
 	margin: 20px 0;
 }
@@ -572,9 +571,4 @@ a.nav-link--after-article{
 	a.nav-link--after-article{
 		line-height: 120px;
 	}
-}
-
-/* Remove shadow for gray-background pic */
-img.graybg{
-	box-shadow: none;
 }
