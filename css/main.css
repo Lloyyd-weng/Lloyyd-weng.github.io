@@ -36,7 +36,7 @@ a{
 }
 
 ::selection{
-	background-color: #ffb7b7;
+	background-color: #5F3AC4;
 	color: #FFFFFF;
 }
 
@@ -149,7 +149,7 @@ h1{
 		margin-right: 20px;
 	}
 	h1{
-		font-size: 5em;
+		font-size: 4em;
 	}
 }
 
@@ -308,7 +308,7 @@ h1.article{
 	font-style: normal;
 	padding-top: 20px;
 	margin-bottom: 60px;
-	font-size: 3.5em;
+	font-size: 3em;
 
 }
 
@@ -318,7 +318,7 @@ h2.article{
 	font-style: normal;
 	margin-top: 80px;
 	padding-top: 0;
-	font-size: 3em;
+	font-size: 2em;
 	text-align: left;
 }
 
@@ -336,7 +336,7 @@ p, ol{
 	font-family: adobe-garamond-pro, serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 1.6em;
+	font-size: 1.2em;
 	line-height: 170%;
 	margin: 20px 0;
 }
